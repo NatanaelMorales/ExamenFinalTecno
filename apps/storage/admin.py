@@ -25,7 +25,7 @@ class ResourceEmpleado(resources.ModelResource):
 
 class AdminEmpleado(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ['dpi']
-    list_display = ['pk_cliente', 'nombre', 'apellido', 'dpi', 'telefono']
+    list_display = ['pk_empleado', 'nombre', 'apellido', 'dpi', 'telefono']
     resource_class = ResourceEquipo
 
 admin.site.register(empleado, AdminEmpleado)

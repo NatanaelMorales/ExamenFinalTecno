@@ -69,7 +69,7 @@
             </div>
           </div>
           <div class="float-right">
-            <div class="make_appo"> <a class="btn white_btn" href="make_appointment.html">Make Appointment</a> </div>
+            <div class="make_appo"> <a class="btn white_btn">Make Appointment</a> </div>
           </div>
         </div>
       </div>
@@ -112,29 +112,41 @@
                 </li>
                 <li> <a href="#">Pages</a>
                   <ul>
-                    <li><a href="it_career.html">Career</a></li>
-                    <li><a href="it_price.html">Pricing</a></li>
-                    <li><a href="it_faq.html">Faq</a></li>
-                    <li><a href="it_privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="it_error.html">Error 404</a></li>
+                    <li><a>Career</a></li>
+                    <li><a>Pricing</a></li>
+                    <li><a>Faq</a></li>
+                    <li><a>Privacy Policy</a></li>
+                    <li><a>Error 404</a></li>
                   </ul>
                 </li>
-                <li> <a href="it_shop.html">Shop</a>
+                <li> <a>Shop</a>
                   <ul>
-                    <li><a href="it_shop.html">Shop List</a></li>
-                    <li><a href="it_shop_detail.html">Shop Detail</a></li>
-                    <li><a href="it_cart.html">Shopping Cart</a></li>
-                    <li><a href="it_checkout.html">Checkout</a></li>
+                    <li><a>Shop List</a></li>
+                    <li><a>Shop Detail</a></li>
+                    <li><a>Shopping Cart</a></li>
+                    <li><a>Checkout</a></li>
                   </ul>
                 </li>
-                <li> <a href="it_contact.html">Contact</a>
+                <li> <a>Contact</a>
                   <ul>
-                    <li><a href="it_contact.html">Contact Page 1</a></li>
-                    <li><a href="it_contact_2.html">Contact Page 2</a></li>
+                    <li><a>Contact Page 1</a></li>
+                    <li><a>Contact Page 2</a></li>
                   </ul>
                 </li>
               </ul>
             </div>
+            {%if allproduct%}
+              {%for arrayproduct in allproduct%}
+                <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
+                  <div class="u-container-layout">
+                    <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
+                    <h4 class="u-text u-text-2">{{arrayproduct.nombre}}</h4>
+                    <p>{{arrayproduct.descripcion}}</p>
+                    <p class="price"><span>Q{{arrayproduct.precio}}</span></p>
+                  </div>
+                </div>
+              {%endfor%}
+            {%endif%}
             <div class="search_icon">
               <ul>
                 <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>

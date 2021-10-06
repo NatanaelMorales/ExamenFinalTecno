@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class StorageConfig(AppConfig):
-    name = 'storage.apps'
+    name = 'apps.storage'

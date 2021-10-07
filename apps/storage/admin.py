@@ -12,7 +12,7 @@ class ResourceEquipo(resources.ModelResource):
 
 class AdminEquipo(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ['nombre_equipo']
-    list_display = ['pk_equipo', 'codigo', 'nombre_equipo', 'descripcion', 'precio']
+    list_display = ['pk_equipo', 'codigo_equipo', 'nombre_equipo', 'descripcion_equipo', 'precio_equipo']
     resource_class = ResourceEquipo
 
 admin.site.register(Equipo, AdminEquipo)

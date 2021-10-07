@@ -135,18 +135,7 @@
                 </li>
               </ul>
             </div>
-            {%if allequipo%}
-              {%for arrayequipo in allequipo%}
-                <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
-                  <div class="u-container-layout">
-                    <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
-                    <h4 class="u-text u-text-2">{{arrayequipo.nombre_equipo}}</h4>
-                    <p>{{arrayequipo.descripcion_equipo}}</p>
-                    <p class="price"><span>Q{{arrayequipo.precio_equipo}}</span></p>
-                  </div>
-                </div>
-              {%endfor%}
-            {%endif%}
+
             <div class="search_icon">
               <ul>
                 <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
@@ -616,6 +605,18 @@
         </div>
       </div>
     </div>
+    {%if allequipo%}
+      {%for arrayequipo in allequipo%}
+        <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
+          <div class="u-container-layout">
+            <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
+            <h4 class="u-text u-text-2">{{arrayequipo.nombre_equipo}}</h4>
+            <p>{{arrayequipo.descripcion_equipo}}</p>
+            <p class="price"><span>Q{{arrayequipo.precio_equipo}}</span></p>
+          </div>
+        </div>
+      {%endfor%}
+    {%endif%}
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
         <div class="product_list">

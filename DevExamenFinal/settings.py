@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'DevExamenFinal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-"""
+
 DATABASES = {
 
     'default': {
@@ -100,7 +100,7 @@ DATABASES = {
         default=config('DATABASE_URL')
     )
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
